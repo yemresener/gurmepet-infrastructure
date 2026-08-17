@@ -61,7 +61,7 @@ services:
       - redis_data:/data 
 
   frontend:
-    image: ghcr.io/yemresener/ecommerce-frontend:latest
+    image: ghcr.io/yemresener/gurmepet-frontend:latest
     restart: unless-stopped
 
   mysql:
