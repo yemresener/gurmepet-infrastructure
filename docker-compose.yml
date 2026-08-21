@@ -8,8 +8,7 @@ services:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - storage_data:/var/www/storage/app/public
       - public_assets:/var/www/public_shared
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
+      - ./ssl:/etc/nginx/ssl:ro
     depends_on:
       - backend
       - frontend
