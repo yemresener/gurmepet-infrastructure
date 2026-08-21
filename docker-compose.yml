@@ -61,6 +61,8 @@ services:
 
   frontend:
     image: ghcr.io/yemresener/gurmepet-frontend:latest
+    environment:
+      - NODE_OPTIONS=--use-openssl-ca
     restart: unless-stopped
 
   mysql:
