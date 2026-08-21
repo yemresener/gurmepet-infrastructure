@@ -62,10 +62,6 @@ services:
   frontend:
     image: ghcr.io/yemresener/gurmepet-frontend:latest
     restart: unless-stopped
-    volumes:
-      - ./ssl/gurmepet.crt:/etc/ssl/certs/gurmepet-origin.crt:ro
-    environment:
-      - NODE_EXTRA_CA_CERTS=/etc/ssl/certs/gurmepet-origin.crt
 
   mysql:
     image: mysql:8.0
